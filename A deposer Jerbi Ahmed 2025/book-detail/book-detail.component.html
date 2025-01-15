@@ -1,0 +1,39 @@
+<div class="book-detail container" *ngIf="book">
+    <div class="book-card">
+      <div class="back-nav">
+        <a routerLink="/books" class="back-link">
+          <span class="arrow">←</span>
+          Back to Library
+        </a>
+      </div>
+      
+      <h2>{{ book.title }}</h2>
+      
+      <div class="book-info">
+        <div class="info-group">
+          <label>Author</label>
+          <p>{{ book.author }}</p>
+        </div>
+        
+        <div class="info-group">
+          <label>Editor</label>
+          <p>{{ book.editor }}</p>
+        </div>
+        
+        <div class="info-group">
+          <label>Category</label>
+          <span class="category-tag">{{ book.category }}</span>
+        </div>
+        
+        <div class="info-group">
+          <label>Publication Year</label>
+          <p>{{ book.publication_year }}</p>
+        </div>
+        
+        <div class="info-group full-width">
+          <label>Abstract</label>
+          <p class="abstract">{{ book.abstruct }}</p>
+        </div>
+      </div>
+    </div>
+  </div>

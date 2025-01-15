@@ -1,0 +1,57 @@
+<div class="book-list container">
+    <h2>Library Collection</h2>
+    <div class="books-grid">
+      <div class="book-card" *ngFor="let book of books">
+        <div class="book-content">
+          <h3>{{ book.title }}</h3>
+          <p class="author">by {{ book.author }}</p>
+          <p class="category">{{ book.category }}</p>
+          <a [routerLink]="['/book', book.bookId]" class="view-details">
+            View Details
+            <span class="arrow">→</span>
+          </a>
+        </div>
+      </div>
+    </div>
+    
+<section class="body" >
+
+
+    <section class="carousel">
+      
+      <div class="carousel__container" >
+        
+          <div class="carousel-item" *ngFor="let item of books_best_sellers " (click)="open_book(item)" >
+            <img
+              class="carousel-item__img"
+              src="{{item.book_image}}"
+              alt="auteur cover"
+            />
+            <div class="carousel-item__details">
+              <div class="controls">
+                <span class="fas fa-play-circle"  ></span>
+              </div>
+              <h6 class="carousel-item__details--subtitle">{{item.title}} </h6>
+            </div>
+          </div>
+        
+       
+        
+      </div>
+    </section>
+</section>
+<div class="dialog-box bg-white" id="dialog">
+    <img src="{{book_cover}}" alt="book cover">
+    <h2>{{book_title}}</h2>
+    <p>Auteur : {{book_author}}</p>
+    <p>Description : {{book_description}}</p>
+
+
+    <button aria-label="close" class="x" (click)="close_dialog()">❌</button>
+</div>
+  </div>
+
+
+  
+
+

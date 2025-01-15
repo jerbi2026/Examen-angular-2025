@@ -1,0 +1,38 @@
+<div class="search-container container">
+    <div class="search-box">
+      <h2>Search Books</h2>
+      <div class="search-input">
+        <input 
+          type="text" 
+          [(ngModel)]="searchTerm" 
+          placeholder="Enter book title, author or category..."
+          (keyup.enter)="rechercherLivre(searchTerm)"
+        >
+        <button (click)="rechercherLivre(searchTerm)" class="search-button">
+          🔍 Search
+        </button>
+      </div>
+
+      <div class="results" *ngIf="livres.length > 0">
+        <h3>Search Results</h3>
+        <div class="books-grid">
+          <div class="book-card" *ngFor="let book of livres">
+            <div class="book-content">
+                <img *ngIf="book.volumeInfo?.imageLinks" [src]="book.volumeInfo.imageLinks.thumbnail" alt="cover">
+              <h4>{{ book.title }}</h4>
+              <p class="author">by {{ book.author }}</p>
+              <p class="category">{{ book.category }}</p>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="no-results" *ngIf="searched && livres.length === 0">
+        <p>No books found matching your search.</p>
+      </div>
+    </div>
+  </div>
+
+  
+  

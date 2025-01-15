@@ -1,0 +1,19 @@
+[{
+    "bookId": 1,
+    "title": "Nexus",
+    "author": "Yuval Noah Harari",
+    "category": "Essai d'histoire",
+    "editor": "Albin Michel",
+    "publication_year": 2024,
+    "abstruct": "L'auteur revisite l'histoire de l'humanité pour comprendre comment les réseaux d'information ont fait et défait notre monde."
+},
+{
+    "bookId": 2,
+    "title": "Dieu n'habite pas la Havane",
+    "author": "Yasmina Khadra",
+    "editor": "Julliard",
+    "category": "Roman",
+    "date_publication": 2016,
+    "abstruct": "Ce livre est un voyage au pays de tous les paradoxes et de tous les rêves."
+}
+]    
